@@ -1,0 +1,27 @@
+﻿@model FileViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Image</h1>
+<div class="row">
+    <div class="col-md-5">
+        @*<div asp-validation-summary=""></div>*@
+        <ul class="list-group">
+            <li class="list-group-item"><b>FileName :</b> @Model.FileName</li>
+            <li class="list-group-item"><b>DataName :</b>@Model.FileData</li>
+
+        </ul>
+        <div>
+            Are You sure..Do You Want to Delete This Image?
+        </div>
+        <div>
+            <form asp-controller="FileUpload" asp-action="Delete" method="post">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>  
+            <a asp-controller="FileUpload" asp-action="Index">Back to List</a>
+    </div>
+</div>
+
+

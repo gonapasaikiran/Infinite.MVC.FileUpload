@@ -1,0 +1,36 @@
+﻿@model FileViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Add Image</h1>
+
+@*<form asp-controller="FileUpload" asp-action="Create" method="post">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-2">
+                <label asp-for="FileName" class="form-label"></label>
+                <input type="text" asp-for="FileName" class="form-control" />
+                <span asp-validation-for="FileName"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="FileData" class="form-label"></label>
+                <input type="text" asp-for="FileData" class="form-control" />
+
+                <span asp-validation-for="FileData"></span>
+            </div>
+            
+            <div class="mt-2 d-grid">
+                <input type="submit" class="btn btn-primary" value="Add New" />
+            </div>
+        </div>
+    </div>
+</form>
+
+*@
+<h1>UploadFile</h1> 
+<form asp-controller="FileUpload" asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="file" name="File" class="form-control-file"  multiple />     
+    </div>     
+    <button type="submit" class="btn btn-danger">Upload</button></form>

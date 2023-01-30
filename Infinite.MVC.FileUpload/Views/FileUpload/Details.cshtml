@@ -1,0 +1,16 @@
+﻿@model FileViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<h1> Image Details</h1>
+<div class="row">
+    <div class="col-md-5">
+        <ul class="list-group">
+            <li class="list-group-item"><b>FileName :</b>@Model.FileName</li>
+            <li class="list-group-item"><b>FileData :</b>@Model.FileData</li>
+        </ul>
+        <a asp-controller="FileUpload" asp-action="Index">Back to List</a>
+    </div>
+</div>

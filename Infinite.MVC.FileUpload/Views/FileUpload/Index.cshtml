@@ -1,0 +1,26 @@
+﻿@model IEnumerable<FileViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="row">
+    <div class="col-md-7">
+        <div class="row">
+            <div class="col">
+                <h2>Images</h2>
+            </div>
+            <div class="col text-end">
+
+                <a asp-controller="FileUpload" asp-action="Create" class="btn btn-warning">Add Image</a>
+                <div>
+                    <a asp-controller="FileUpload" asp-action="Details" class="btn btn-primary">Get Image</a>
+                </div>
+                <div>
+                    <a asp-controller="FileUpload" asp-action="Delete" class="btn btn-primary">Delete Image</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
